@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Drake Lyrics Game</title>
 
     <link rel="stylesheet" href="style.css">
@@ -12,17 +15,49 @@
 
 <body>
 
-    <h1>🎵 Drake Lyrics Game 🎵</h1>
+    <div class="game-container">
 
-    <div id="game">
-        <p id="question"></p>
+        <h1>🎵 Drake Lyrics Game 🎵</h1>
 
-        <input id="answer" type="text" placeholder="Your answer">
+        <p class="subtitle">
+            Guess the Drake song from the lyric snippet!
+        </p>
 
-        <button id="submit">Submit</button>
+        <div class="question-number" id="question-number">
+            Question
+        </div>
 
-        <p id="result"></p>
-        <p id="score"></p>
+        <div class="lyrics" id="lyrics">
+            Loading...
+        </div>
+
+        <input
+            id="answer"
+            type="text"
+            placeholder="Enter your answer..."
+            autocomplete="off"
+        >
+
+        <div class="buttons">
+            <button id="submit">Submit Answer</button>
+            <button id="hint-button">💡 Hint</button>
+            <button id="next-button" style="display: none;">
+                Next Question →
+            </button>
+        </div>
+
+        <div id="result"></div>
+
+        <div id="hint"></div>
+
+        <div class="score" id="score">
+            Score: 0
+        </div>
+
+        <button id="restart" class="restart">
+            🔄 Restart Game
+        </button>
+
     </div>
 
     <script type="py" src="./game.py"></script>
