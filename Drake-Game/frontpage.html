@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Drake Lyrics Game</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module"
+        src="https://pyscript.net/releases/2025.2.2/core.js">
+    </script>
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <h1>🎵 Drake Lyrics Game 🎵</h1>
+
+        <p class="subtitle">
+            Guess the Drake song from the lyric snippet!
+        </p>
+
+        <div class="question-number" id="question-number">
+            Question
+        </div>
+
+        <div class="lyrics" id="lyrics">
+            Loading...
+        </div>
+
+        <input
+            id="answer"
+            type="text"
+            placeholder="Enter your answer..."
+            autocomplete="off"
+        >
+
+        <div class="buttons">
+            <button id="submit">Submit Answer</button>
+            <button id="hint-button">💡 Hint</button>
+            <button id="next-button" style="display: none;">
+                Next Question →
+            </button>
+        </div>
+
+        <div id="result"></div>
+
+        <div id="hint"></div>
+
+        <div class="score" id="score">
+            Score: 0
+        </div>
+
+        <button id="restart" class="restart">
+            🔄 Restart Game
+        </button>
+
+    </div>
+
+    <script type="py" src="./game.py"></script>
+
+</body>
+</html>
